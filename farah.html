@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <title>Document</title>
+  <style>
+    .fakeimg {
+      width: 500px;
+      height: 400px;
+      background: rgb(252, 253, 255);
+      font-size: 20px;
+      margin-top: 10%;
+    }
+    .fakeimg1 {
+      width: 500px;
+      height: 700px;
+      background: rgba(245,245,245);
+      font-size: 20px;
+      margin-top: 10%;
+    }
+    .btn:hover {
+      background-color: rgba(14, 190, 235, 0.712);
+    }
+   .upload{
+     background-color: rgb(184, 179, 206);
+     border-style:  outset;
+   }
+    .super {
+      -webkit-text-decoration: rgb(11, 74, 247) solid underline;
+      text-decoration: rgb(19, 19, 51) solid underline;
+      -webkit-text-decoration-skip: objects;
+      text-decoration-skip: objects;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row justify-content-md-center">
+      <h1 class="super"><em>Get your own stamp</em></h1>
+    </div>
+    <div class="row">
+      <div class="  col-md-6">
+        <div class="fakeimg">
+          <p> <em> <strong>Because stamps are for all occasions, we are giving you the ability to create your very own personalized
+            stamp!</strong>
+            <br>
+            Are you a stamp collector?
+            <br>
+            Do you have a special occasion?
+            <br>
+            Are you celebrating a milestone?
+            <br>
+            Do you want to honor a special person's memory?
+            <br>
+            How about creating your own personalized stamp and adding it to your collection, using it to send your
+            invitations or simply sharing it with your friends, family, and coworkers.</em>
+          </p>
+        </div>
+      </div>
+      <div class=" col-md-6">
+        <div class="fakeimg1 d-flex flex-column align-items-center justify-content-start" >
+          <p><span class="text-primary">PERSONALIZE YOUR STAMP </span>| How It Works</p>
+          <p><em>1.Create Photo Stamps</em></p>
+          <h5>Upload your photo below!</h5>
+          <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script>
+            <body>
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                <p><label for="file" class="text-primary" style="cursor: pointer;">Upload Image</label></p>
+                  <div class="col-sm-5 d-flex align-items-center justify-content-center upload">
+                <img id="output" src="no-image.png" width="150px;" height="150px;" />
+              </div>
+                <p><em>2.Customize your design</em></p>
+                  <div class="dropdown">
+                    <button class="btn btn-primary" type="button" data-toggle="dropdown" >
+                      Choose your frame
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right">
+                      <li><a href="#">Black</a></li>
+                      <li><a href="#">Solid</a></li>
+                      <li><a href="#">Dotted</a></li>
+                    </ul>
+                  </div>
+                  <p style="margin-top: 30px;"><em>3.Get your stamp</em></p>
+                  <p>Your stamp will be ready to <br> be printed in less than 5 minutes!</p>
+            <button class="btn btn-primary" type="button"> Confirm</button>
+        </div>
+      </div>
+  </div>
+</body>
+</html>

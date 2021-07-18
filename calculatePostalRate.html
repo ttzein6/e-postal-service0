@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <section class="container-fluid text-light mb-5" >
+        <div class="row">
+            <div class="col d-flex justify-content-start"
+                style="background:transparent url('images/cc.jpg') no-repeat center center /cover;width: 100%; height: 300px;">
+                <div style=" width: 100%;" class="container d-flex align-items-end justify-content-start">
+                    <div style="background-color: rgba(48, 115, 216,0.4); width: fit-content;"
+                        class="d-flex flex-column form-group">
+                        <h2>Rate Calculator </h2>
+                        <div>
+                            <a href="/" style="text-decoration:none ;color:rgb(98, 0, 255)">Home</a>
+                            <span>/ Tools Support / Rate Calculator </span>
+                        </div>
+                        <div class="row" style="margin-left:-2%;">
+                            <br>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                        class="fas fa-envelope"></i></a>
+                            </div>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                        class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row my-5 py-5">
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="d-flex flex-column">
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <h2 class="mb-4">Please fill the form below</h2>
+                        <div class="row ">
+                            <div class="col-md-6">
+                                <div>
+                                    <label for="mail">Type of Mail</label>
+                                    <select name="mails" id="mails" class="form-control">
+                                        <option value="Letters">Letters</option>
+                                        <option value="parcel">email</option>
+                                        <option value="Postcard">Letters</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="mail">Intended location</label>
+                                    <select name="mails" id="mails" class="form-control">
+                                        <option value="Letters">Lebanon</option>
+                                        <option value="Letters">Egypt</option>
+                                        <option value="Letters">Syria</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div>
+                                    <label for="mail">Content of Mail</label>
+                                    <select name="mails" id="mails" class="form-control">
+                                        <option value="Content">Document</option>
+                                    </select>
+                                </div>
+                                
+                                
+                                <div >
+                                    <label>Upload your id</label>
+                                    <div class="custom-file ">
+                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    </div>  
+                                </div>
+                            </div>
+                    </div>
+                        
+                        <div class="d-flex justify-content-end align-items-end mt-5">
+                            <button class="btn btn-outline-primary mt-3">Send</button>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-primary mt-4">Request Home Service</button>
+                    <button style="width: 183px;" class="btn btn-primary mt-4">Find Nearest Branch</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="border p-2 mb-1 bg-light" style="overflow: auto;">
+                    <h3 class="text-info pl-1">Related Services</h3>
+                    <ul class="pl-3">
+                        <li class="text-dark" style="list-style-image:URL(arrow_list.png);"><a href="#"
+                                class="text-decoration-none text-dark">Inspection and yearly road tax values for
+                                cars,
+                                motorcycles and trucks.</a></li>
+                        <li class="text-dark" style="list-style-image:URL(arrow_list.png);"><a href="#"
+                                class="text-decoration-none text-dark">Civil extract.</a></li>
+                        <li class="text-dark" style="list-style-image:URL(arrow_list.png);"><a href="#"
+                                class="text-decoration-none text-dark">Issuing international driver's license.</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-outline-primary float-right btn-sm">MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

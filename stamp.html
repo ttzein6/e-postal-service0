@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Postal Mail </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        .hr {
+            border: 0;
+            margin-bottom: 10px;
+            width: 15%;
+            height: 2px;
+            background: rgb(0, 140, 255);
+            margin-left: 0px;
+        }
+        .btn-lg {
+            background-color: #FFFFFF;
+            color: rgb(0, 0, 0);
+        }
+        .btn-lg:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section class="container-fluid text-light">
+        <div class="row">
+            <div class="col d-flex justify-content-start"
+                style="background:transparent url('images/18.jpg') no-repeat center center /cover;width: 100%; height: 500px;">
+            </div>
+        </div>
+    </section>
+    <div class=" my-5 py-5 container"  ng-init="choice = 1"> 
+      <div class="my-3 col-s-12">
+        <div class="fakeimg1 d-flex flex-column align-items-center justify-content-start" >
+          <h1 class="text-primary stamp-title"><span hide-xs>~~~</span>~~~PERSONALIZE YOUR STAMP~~~<span hide-xs>~~~</span></h1>
+          <h1 class="stamp-sub"><em>1.Create Photo Stamps</em></h1>
+          <h5>Upload your photo below!</h5>
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+                <p><label for="file" class="text-primary" style="cursor: pointer;">Upload Image</label></p>
+                <div id="imgW" class="col-sm-5 d-flex align-items-center justify-content-center upload" >
+                  <img id="output" src="no-image.png" width="150px;" height="150px;" />
+                </div>
+                <h1 class="stamp-sub"><em>2.Customize your design</em></h1>
+                  <div class="dropdown">
+                    <button class="btn btn-outline-primary " type="button" data-toggle="dropdown" >
+                      Choose Your Frame
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right bg-warning">
+                      <li style="border-bottom: 1px solid #fff;"><button class="btn btn-warning" ng-init="choice=1"><strong style="font-size:larger;">> </strong>Wavy</button></li>
+                      <li style="border-bottom: 1px solid #fff;"><button class="btn btn-warning" ng-init="choice=2"><strong style="font-size:larger;">> </strong>Solid</button></li>
+                      <li><button class="btn btn-warning" ng-init="choice=2"><strong style="font-size:larger;">> </strong>Dotted</button></li>
+                    </ul>
+                  </div>
+                  <h1 style="margin-top: 30px;" class="stamp-sub"> <em>3.Get your stamp</em></h1>
+                  <p>Your stamp will be ready to <br> be printed in less than 5 minutes!</p>
+            <button class="btn btn-warning " style="width:200px;" type="button" ng-click="makeStamp();"> Confirm</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

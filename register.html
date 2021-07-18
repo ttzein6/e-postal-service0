@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>signin</title>
+    <style>
+        .hr1 {
+            border: 0;
+            margin: 0;
+            width: 100%;
+            height: 6px;
+            background: rgb(0, 140, 255);
+        }
+
+        input.larger {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        input.larger:checked~.geekmark {
+            background-color: green;
+        }
+
+        .hr2 {
+            border: 0;
+            margin: 0;
+            width: 20%;
+            height: 2px;
+            background: rgb(0, 140, 255);
+        }
+
+        .button {
+            background-color: rgb(0, 140, 255);
+            /* blue */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="todoCtrl">
+    <div style="background-image: url(images/Capture.PNG);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div style="margin-top:45%" class="col-md-6 ">
+                            <h2 class="text-light"><b>E-Postal-Services</b></h2>
+                            <h2 class="text-light">With My Account,
+                                E-Postal-Services simplifies my daily life.</h2>
+                        </div>
+                        <div class="col-md-8 "></div>
+                    </div>
+                </div>
+
+               
+
+                <div class="col-md-4 shadow-lg p-3 mb-5 bg-white rounded" id="register"
+                    style="background-color:white;margin-top:5%;">
+
+                    <h2>Create your E-Postal-Services Account</h2>
+                    <p style="margin-bottom: 6%;"></p>
+                    <hr class="hr2">
+                    <p style="margin-bottom: 6%;"></p>
+                    <h4>Fill in the sign-up form :</h4>
+
+                    <form action="" method="" name="myForm1">
+                        <p style="margin-bottom: 6%;"></p>
+                        <input type="text" class="w3-input" id="first" name="first" placeholder="First Name" required />
+                        <p style="margin-bottom: 9%;"></p>
+
+                        <input type="text" id="last" class="w3-input" name="last" placeholder="Last Name"
+                            required /><br>
+                        <p style="margin-bottom: 6%;"></p>
+                        <input type="email" id="emailreg" class="w3-input" name="emailreg" placeholder="E-mail Adress"
+                            ng-model="text" required /><br>
+                        <span ng-show="myForm1.emailreg.$error.email">Not a valid e-mail address</span>
+                        <p style="margin-bottom: 6%;"></p>
+                        <input type="password" id="passreg" class="w3-input" name="passreg" placeholder="Password"
+                            required /><br>
+
+                        <p style="margin-bottom: 6%;"></p>
+                        <input type="submit" style="width:100%" name="submitreg" class="button" id="submitreg"
+                            value="Register" />
+                        <p style="margin-bottom: 6%;"></p>
+                    </form>
+                    <p class="text-center">Already have an account?<a href="#!login" > LogIn</a>
+
+                    </p>
+                    <p style="margin-bottom: 25%;"></p>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+
+   
+
+
+
+
+</body>
+
+</html>
