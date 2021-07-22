@@ -8,18 +8,19 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
   
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="/angularJs/angular.js"></script>
   <script src="/angularJs/angular-animate.js"></script>
   <script src="/angularJs/angular-aria.js"></script>
   <script src="/angularJs//angular-route.js"></script>
   <script src="/node_modules/angular-material/angular-material.js"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- <!-- <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
+  <!-- <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css"/>
   <link rel="stylesheet" href="https://rawgit.com/angular/material-start/es5-tutorial/app/assets/app.css"/>-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
 </head>
 <body ng-app="myApp" layout="column" ng-controller="appCtrl">
   <!--First Navbar (small nav)-->
@@ -57,7 +58,7 @@
         <md-nav-item ng-repeat="x in navList" md-nav-click="" name="page1" style="margin-top:-10px;">
           <md-menu md-offset="-100 0" md-position-mode="left bottom">
             <md-button aria-label="Open  menu" ng-click="$mdMenu.open($event)" >
-              <span class="text-secondary navName">{{x.name}}</span> 
+              <span href="#!x.path" class="text-secondary navName">{{x.name}}</span> 
             </md-button>
             <md-menu-content width="7" ng-click="$mdMenu.close()" class="bg-transparent">
               <md-menu-item ng-repeat="o in x.items|uppercase" class="" style="background-color:rgba(118,125,131,0.6);">
@@ -87,12 +88,12 @@
         >
         <md-list>
           <md-list-item ng-repeat="x in navList" ng-click="openMenu()" >
-              <md-button class="navB" id="active" flex="" >
+              <md-button class="navB" id="active" flex="" href="#!{{x.path}}" >
                 {{x.name}}
               </md-button>
           </md-list-item>
           <md-list-item ng-click="openMenu()">
-            <md-button flex=""><md-icon md-svg-icon="/person24dp.svg"></md-icon><strong>Login/Register</strong></md-button>
+            <md-button flex="" href="#!login"><md-icon md-svg-icon="/person24dp.svg"></md-icon><strong>Login/Register</strong></md-button>
           </md-list-item>
           <md-list-item>
             <div class="headerSearch" flex="" >
@@ -107,7 +108,7 @@
   </div>
   <div ng-view></div>
   <footer class="page-footer font-small bg-primary pt-4" style=" font-size: larger;">
-      <md-button    layout-align="center center" class=" m-5" style="background-color:rgba(200, 200, 200, 0.2)">
+      <md-button href="#!"   layout-align="center center" class=" m-5" style="background-color:rgba(200, 200, 200, 0.2)">
         <i class="text-white" style="font-size:20px;font-weight: 550;">E-Postal<strong class="text-warning"> Services</strong></i>
       </md-button>
 
@@ -173,17 +174,20 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a class="text-light" href="#!">Offers</a>
+                        <a class="text-light" href="#!mailing">Mailing</a>
                     </li>
                     <li>
-                        <a class="text-light" href="#!">governmental</a>
+                        <a class="text-light" href="#!governmental">governmental</a>
                     </li>
                     <li>
-                        <a class="text-light" href="#!">Non-governmental</a>
+                        <a class="text-light" href="#!nonGovernmental">Non-governmental</a>
                     </li>
                     <li>
-                        <a class="text-light" href="#!">financial</a>
+                        <a class="text-light" href="#!financial">financial</a>
                     </li>
+                    <li>
+                      <a class="text-light" href="#!onlineServices">Online Services</a>
+                  </li>
                 </ul>
 
             </div>

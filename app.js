@@ -1,22 +1,29 @@
 var myApp = angular.module('myApp',['ngRoute','ngMaterial','ngAria']);
 myApp.controller('appCtrl',function($scope,$mdSidenav){
-  $scope.mailing={name: "Mailing", items: [],route:["post","EMS","clickship"]};
-  $scope.governmental={name: "Governmental", items: [],route:["huntinglicense","mod","residence"]};
-  $scope.nongovernmental={name: "Non-Governmental", items: [],route:["MVI",""]};
-  $scope.financial={name: "Financial", items: [],route:[]};
-  $scope.onlineServices={name: "Online Services", items: [],route:["clickship","huntingInsurance","stamp"]};
+  $scope.mailing={name: "Mailing", items: [],route:["post","EMS","clickship"],path:"mailing"};
+  $scope.governmental={name: "Governmental", items: [],route:["huntinglicense","mod","residence"],path:"governmental"};
+  $scope.nongovernmental={name: "Non-Governmental", items: [],route:["MVI","personalAccidentInsurance"],path:"nonGovernmental"};
+  $scope.financial={name: "Financial", items: [],route:["carAlert","paymentParkMeter"],path:"financial"};
+  $scope.onlineServices={name: "Online Services", items: [],route:["clickship","stamp"],path:"onlineServices"};
   $scope.mailing.items = ["postal registered mail","EMS","click&ship"];
   $scope.governmental.items = ["Hunting license","Ministry of defence","Annual Residency Permit "];
   $scope.nongovernmental.items = ["Mandatory Vehicular Insurance","Personal Accident Insurance Policy"];
   $scope.financial.items = ["Car Alert","Payment of Park Meter Tickets"];
-  $scope.onlineServices.items = ["Click&ship","Hunting insurance","MyStamp"];
+  $scope.onlineServices.items = ["Click&ship","MyStamp"];
 
   $scope.navList= [$scope.mailing,$scope.governmental, $scope.nongovernmental, $scope.financial, $scope.onlineServices];
   //$scope.navList= ["mailing","governmental", "nongovernmental", "financial", "onlineServices"];
   $scope.openMenu = function() {
     $mdSidenav('left').toggle();
   };
-
+  $scope.orderId;
+  $scope.carNum;
+  $scope.setOrderId = function(x){
+    $scope.orderId = x;
+  };
+  $scope.setCarNum = function(x){
+    $scope.carNum = x;
+  };
   $scope.makeStamp = function(choice){
    
     var x = document.getElementById('output');
@@ -33,6 +40,9 @@ myApp.controller('appCtrl',function($scope,$mdSidenav){
       x.style="border-style: dotted;";
   
 };
+});
+myApp.controller("trackingCtrl",function($scope){
+  $scope.orderId ;
 });
 myApp.config(function($sceProvider) {
   // ngMaterial $mdIconProvider will be updated  to mark urls as safe.
@@ -95,6 +105,39 @@ myApp.config(['$routeProvider',function($routeProvider){
   })
   .when('/calculatePostalRate',{
     templateUrl: "calculatePostalRate.html",
+  })
+  .when('/tracking',{
+    templateUrl: "tracking.html",
+  })
+  .when('/mailing',{
+    templateUrl: "mailing.html",
+  })
+  .when('/governmental',{
+    templateUrl: "governmental.html",
+  })
+  .when('/nonGovernmental',{
+    templateUrl: "nongovernmental.html",
+  })
+  .when('/financial',{
+    templateUrl: "financial.html",
+  })
+  .when('/onlineServices',{
+    templateUrl: "onlineServices.html",
+  })
+  .when('/calculateYourMec',{
+    templateUrl: "calculateMec.html",
+  })
+  .when('/paynow',{
+    templateUrl: "paynow.html",
+  })
+  .when('/personalAccidentInsurance',{
+    templateUrl: "personalaccidentinsurance.html",
+  })
+  .when('/carAlert',{
+    templateUrl: "caralert.html",
+  })
+  .when('/paymentParkMeter',{
+    templateUrl: "paymentmeter.html",
   })
   .otherwise({
     redirectTo:"/"
@@ -166,3 +209,14 @@ var loadFile = function(event) {
   var image = document.getElementById('output');
   image.src = URL.createObjectURL(event.target.files[0]);
 };
+function submission(){
+  document.getElementById('submittedAlert').style="display:auto;";
+  var delayInMilliseconds = 2000; //1 second
+
+  setTimeout(function() {
+    //your code to be executed after 1 second
+    document.getElementById('submittedAlert').style="display:none;";
+    window.location.href = "#!";
+  }, delayInMilliseconds);
+ 
+}

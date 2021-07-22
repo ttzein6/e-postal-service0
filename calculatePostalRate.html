@@ -46,7 +46,7 @@
             <div class="col-md-9">
                 <div class="container">
                     <div class="d-flex flex-column">
-                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <form  method="post" enctype="multipart/form-data" onsubmit="submission()">
                         <h2 class="mb-4">Please fill the form below</h2>
                         <div class="row ">
                             <div class="col-md-6">
@@ -87,9 +87,16 @@
                     </div>
                         
                         <div class="d-flex justify-content-end align-items-end mt-5">
-                            <button class="btn btn-outline-primary mt-3">Send</button>
+                            <input type="submit" class="btn btn-lg btn-outline-primary mt-3" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?" value="Send">
+                        </div>
+                        <div class="alert alert-success my-3" role="alert" style="display: none;" id="submittedAlert" >
+                            Done!
+                          </div>
+                        <div class="alert alert-danger" role="alert" style="display: none;">
+                            Something wrong!
                         </div>
                     </form>
+                  
                     </div>
                 </div>
                 <div>

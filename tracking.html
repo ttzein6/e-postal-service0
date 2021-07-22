@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Postal Mail </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .hr {
+            border: 0;
+            margin-bottom: 10px;
+            width: 15%;
+            height: 2px;
+            background: rgb(0, 140, 255);
+            margin-left: 0px;
+        }
+        .btn-lg {
+            background-color: #FFFFFF;
+            color: rgb(0, 0, 0);
+        }
+        .btn-lg:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <section class="container-fluid text-light">
+      
+        <div class="row">
+            <div class="col d-flex justify-content-start"
+                style="background:transparent url('images/tracking.jpg') no-repeat center center /cover;width: 100%; height: 300px;">
+                <div style=" width: 100%;" class="container d-flex align-items-end justify-content-start">
+                    <div style="background-color: rgba(70, 73, 78, 0.466); width: fit-content;"
+                        class="d-flex flex-column form-group p-3 px-5">
+                        <h2 style="color:White">Tracking your item</h2>
+                        <div>
+                            <a href="/" style="text-decoration:none ;color:white">Home</a>
+                            <span style="color:white">/</span>
+                            <span style="color:white"><b> Tracking you item </b></span>
+                          
+                        </div>
+                        <div class="row" style="margin-left:-2%;">
+                            <br>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                      style="color:white"  class="fas fa-envelope"></i></a>
+                            </div>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                       style="color:white" class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class=" my-3 container" >
+      <div class="row" >
+        <div class="col-12" >
+          <h2>My Order / Tracking</h2>
+          <hr/>
+          <h3>Order Id: {{orderId}}</h3>
+          <div class="col-md-12 row md-whiteframe-5dp bg-light  p-3 my-5" layout="row"  layout-align="space-around center" >
+            <div class="col-md-2" layout="column" layout-align="space-between center" layout-margin="5">
+              <strong layout="row">Estimated Delevery Time:</strong>
+              <span layout="row m-5">29 Oct 2021</span>
+            </div>
+            <div class="col-md-2" layout="column" layout-align="space-between center" layout-margin="5">
+              <strong layout="row">Shipping By:</strong>
+              <span layout="row mt-2">DHL | +1(123)1234567890</span>
+            </div>
+            <div class="col-md-2" layout="column" layout-align="space-between center" layout-margin="5">
+              <strong layout="row">Status:</strong>
+              <span layout="row mt-2">Picked up by the courier</span>
+            </div>
+            <div class="col-md-2" layout="column" layout-align="space-between center" layout-margin="5">
+              <strong layout="row">Tracking #:</strong>
+              <span layout="row mt-2">10151151511</span>
+            </div>
+          </div>
+          <div class="container px-1 px-md-4 py-5 mx-auto ">
+            <div class="card " md-whiteframe="5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12">
+                <ul id="progressbar" class="text-center">
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="active step0"></li>
+                    <li class="step0"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row justify-content-between top">
+            <div class="row d-flex icon-content"> <img class="icon" src="images/9nnc9Et.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Order<br>Processed</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="images/u1AzR7w.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Order<br>Shipped</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="images/TkPm63y.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Order<br>En Route</p>
+                </div>
+            </div>
+            <div class="row d-flex icon-content"> <img class="icon" src="images/HdsziHP.png">
+                <div class="d-flex flex-column">
+                    <p class="font-weight-bold">Order<br>Arrived</p>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

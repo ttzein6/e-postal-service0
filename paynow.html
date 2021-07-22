@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Postal Mail </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+        <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        .hr {
+            border: 0;
+            margin-bottom: 10px;
+            width: 15%;
+            height: 2px;
+            background: rgb(0, 140, 255);
+            margin-left: 0px;
+        }
+        .btn-lg {
+            background-color: #FFFFFF;
+            color: rgb(0, 0, 0);
+        }
+        .btn-lg:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <section class="container-fluid text-light">
+      
+        <div class="row">
+            <div class="col d-flex justify-content-start"
+                style="background:transparent url('images/tracking.jpg') no-repeat center center /cover;width: 100%; height: 300px;">
+                <div style=" width: 100%;" class="container d-flex align-items-end justify-content-start">
+                    <div style="background-color: rgba(70, 73, 78, 0.466); width: fit-content;"
+                        class="d-flex flex-column form-group p-3 px-5">
+                        <h2 style="color:White">Pay Online</h2>
+                        <div>
+                            <a href="/" style="text-decoration:none ;color:white">Home</a>
+                            <span style="color:white">/</span>
+                            <span style="color:white"><b> Pay Online </b></span>
+                          
+                        </div>
+                        <div class="row" style="margin-left:-2%;">
+                            <br>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                      style="color:white"  class="fas fa-envelope"></i></a>
+                            </div>
+                            <div class="col-md-1 col-1"><a href="#" class="text-decoration-none"><i
+                                       style="color:white" class="fas fa-share-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class=" my-5 container" >
+      <div class="row" >
+        <div class="col-12" >
+          <h2>Pay Online Now</h2>
+          <hr/>
+          
+          <div class="col-md-12 row md-whiteframe-5dp bg-light  p-3 my-5" layout="row"  layout-align="center center" >
+            <form onsubmit="submission()" layout="column" layout-align="center start" class="w-100 ml-3">
+              <div layout-gt-md="row" layout-xs="column" layout-align-gt-xs="space-around center" layout-align-xs="start start" class="w-100 row my-3 ">
+                <label class="w-50 text-dark display-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">Accepted Credit Card Types: </label>
+                <ul style="display:flex; list-style: none;" class="w-50 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                  <li><img src="/images/visa.png" alt="" class="creditIcon mx-sm-2" ></li>
+                  <li><img src="/images/mastercard.jpg" alt="" class="creditIcon mx-sm-2"></li>
+                  <li><img src="/images/discover.png" alt="" class="creditIcon mx-sm-2"></li>
+                  <li><img src="/images/amex.png" alt="" class="creditIcon mx-sm-2"></li>
+                </ul>
+              </div> 
+              <div layout-gt-md="row" layout-align="space-around center" class="w-100 my-3">
+                <label for="creditcarnum" class="w-50 text-dark display-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">Credit Car Number: </label>
+                <input type="number" name="creditcardnum" class="w-50 col-lg-6 col-md-12 col-sm-12 col-xs-12" required>
+              </div>
+              <div layout-gt-md="row" class="w-100 my-3">
+                <label for="cvv" class="w-50 text-dark display-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">CVV Code: </label>
+                <input type="number" name="cvv" class="w-50 col-lg-6 col-md-12 col-sm-12 col-xs-12" required>
+              </div>
+              
+              <div layout-gt-md="row" layout-align="space-around center" class="w-100 my-3">
+                <label for="expdate" class="w-50 text-dark display-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">Exp. Date: </label>
+                <input type="date" name="expdate" class="w-50 col-lg-6 col-md-12 col-sm-12 col-xs-12" required> 
+              </div>
+              <div layout-gt-md="row" class="w-100 my-3">
+                <label for="cardHolderName" class="w-50 text-dark display-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">Card Holder Name: </label>
+                <input type="text" name="cardHolderName" class="w-50 col-lg-6 col-md-12 col-sm-12 col-xs-12" required>
+              </div>
+              <div layout-gt-md="row" class="w-100 my-3">
+                <input type="submit" class="btn btn-outline-warning btn-lg" style="border-width: 3px;" value="Pay Now ">
+              </div>
+              <div class="alert alert-success my-3" role="alert" style="display: none;" id="submittedAlert" >
+                Done!
+              </div>
+            </form>
+            <div layout="column" flex="">
+              
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+</body>
+</html>

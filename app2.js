@@ -1,13 +1,13 @@
 var myApp = angular.module('myApp',['ngRoute','ngMaterial','ngAria']);
 myApp.controller('appCtrl',function($scope,$mdSidenav){
-  $scope.cad={name: "Collection and Disbursement", items: [],route:["postOC","postOD","HCS"]};
-  $scope.governmental={name: "Governmental Formalities", items: [],route:["realEA"]};
-  $scope.directM={name: "Direct Marketing", items: [],route:["directMail"]};
-  $scope.mailingS={name: "Mailing Solutions", items: [],route:["LVMail"]};
-  $scope.mailingM={name: "Mailing Management", items: [],route:[]};
+  $scope.cad={name: "Collection and Disbursement", items: [],route:["postOC","postOD","HCS"],path:"cad"};
+  $scope.governmental={name: "Governmental Formalities", items: [],route:["realEA","civilStatus"],path:"governmentalB"};
+  $scope.directM={name: "Direct Marketing", items: [],route:["directMail","dataRental"],path:"directMarketing"};
+  $scope.mailingS={name: "Mailing Solutions", items: [],route:["LVMail","EMS"],path:"mailingSolutions"};
+  $scope.mailingM={name: "Mailing Management", items: [],route:["mailRoom","wareHouse"],path:"mailingManagement"};
 
   $scope.cad.items = ["Post Office collection","Post Office Disbursement","Home Collection Service"];
-  $scope.governmental.items = ["Real Estate Affairs Formalities","Police Record", "Civil Status"];
+  $scope.governmental.items = ["Real Estate Affairs Formalities", "Civil Status"];
   $scope.directM.items = ["Direct Mail","Data Rental"];
   $scope.mailingS.items = ["Large Volume Mail","EMS"];
   $scope.mailingM.items = ["Mail Room","Warehousing Service"];
@@ -17,7 +17,14 @@ myApp.controller('appCtrl',function($scope,$mdSidenav){
   $scope.openMenu = function() {
     $mdSidenav('left').toggle();
   };
-
+  $scope.orderId;
+  $scope.carNum;
+  $scope.setOrderId = function(x){
+    $scope.orderId = x;
+  };
+  $scope.setCarNum = function(x){
+    $scope.carNum = x;
+  };
   $scope.makeStamp = function(choice){
    
     var x = document.getElementById('output');
@@ -34,6 +41,9 @@ myApp.controller('appCtrl',function($scope,$mdSidenav){
       x.style="border-style: dotted;";
   
 };
+});
+myApp.controller("trackingCtrl",function($scope){
+  $scope.orderId ;
 });
 myApp.config(function($sceProvider) {
   // ngMaterial $mdIconProvider will be updated  to mark urls as safe.
@@ -67,12 +77,35 @@ myApp.config(['$routeProvider',function($routeProvider){
   .when('/EMS',{
     templateUrl: "EMS.html",
   })
- 
+  .when('/cad',{
+    templateUrl: "cad.html",
+  })
+  .when('/governmentalB',{
+    templateUrl: "governmentalB.html",
+  })
+  .when('/directMarketing',{
+    templateUrl: "directMarketing.html",
+  })
+  .when('/mailingSolutions',{
+    templateUrl: "mailingSolutions.html",
+  })
+  .when('/calculateYourMec',{
+    templateUrl: "calculateMec.html",
+  })
+  .when('/paynow',{
+    templateUrl: "paynow.html",
+  })
+  .when('/mailingManagement',{
+    templateUrl: "mailingManagement.html",
+  })
   .when('/new',{
     templateUrl: "new.html",
   })
   .when('/directMail',{
     templateUrl: "directmail.html",
+  })
+  .when('/dataRental',{
+    templateUrl: "dataRental.html",
   })
   .when('/LVMail',{
     templateUrl: "largevolumemail.html",
@@ -86,9 +119,31 @@ myApp.config(['$routeProvider',function($routeProvider){
   .when('/calculatePostalRate',{
     templateUrl: "calculatePostalRate.html",
   })
- 
+  .when('/tracking',{
+    templateUrl: "tracking.html",
+  })
+  .when('/mailRoom',{
+    templateUrl: "mailroom.html",
+  })
+  .when('/wareHouse',{
+    templateUrl: "warehouse.html",
+  })
+  .when('/civilStatus',{
+    templateUrl: "CivilStatus.html",
+  })
   .otherwise({
     redirectTo:"/"
 })
     
 }]);
+function submission(){
+  document.getElementById('submittedAlert').style="display:auto;";
+  var delayInMilliseconds = 2000; //1 second
+
+  setTimeout(function() {
+    //your code to be executed after 1 second
+    document.getElementById('submittedAlert').style="display:none;";
+    window.location.href = "#!";
+  }, delayInMilliseconds);
+ 
+}

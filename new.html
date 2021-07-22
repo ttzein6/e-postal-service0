@@ -34,6 +34,8 @@
 </script>
 
 <body class="bg-white" onload="setStates();">
+    
+
     <section class="container-fluid text-light">
         <div class="row">
             <div class="col d-flex justify-content-start"
@@ -77,12 +79,13 @@
                                     Space</small> </p>
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-12">
+                                        <div class="col-md-12" >
 
-                                            <input class="form-control" type="text" value="" />
+                                            <input class="form-control" type="text"  ng-model="orderIdset"/>
+                                            
                                         </div>
                                         <div class="col-md-12">
-                                            <a href="#" class="btn btn-primary">Track</a>
+                                            <a ng-click="setOrderId(orderIdset);" href="#!tracking" class="btn btn-primary mt-1">Track</a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,31 +104,19 @@
                                
                                 <h5 class="card-title">Check your mecanique </h5>
 
-                                <p class="card-text text-dark"><small>Enter your car number&code</small> </p>
+                                <p class="card-text text-dark"><small>Enter your car number</small> </p>
                                 <div class="container">
                                     <div class="row">
-                                        <div class="col-md-12 col-lg-4">
-                                            <form id="myForm">
-                                                <select style="width:108%;" name="state" id="state">
-                                                    <option value="">code</option>
-                                                    <option value="">S</option>
-                                                    <option value="">B</option>
-                                                    <option value="">G</option>
-                                                    <option value="">J</option>
-                                                    <option value="">O</option>
-                                                    <option value="">A</option>
-                                                </select>
-                                            </form>
-                                        </div>
-                                        <div class="col-md-6">
+                                        
+                                        <div class="col-md-12">
 
-                                            <input class="form-control" style="margin-left: -1.3rem;" type="text" value="" />
+                                            <input class="form-control"  type="text" value="" ng-model="carNumset" />
                                         </div>
                                         
 
 
-                                        <div class="col-md-4 mt-1">
-                                            <a style="margin-left: -3rem;" href="#" class="btn btn-primary">Check</a>
+                                        <div class="col-md-6 mt-1">
+                                            <a  href="#!calculateYourMec" class="btn btn-primary" ng-click="setCarNum(carNumset);">Check</a>
                                         </div>
                                     </div>
                                 </div>
@@ -169,7 +160,7 @@
                                 <div class="container pt-2 mt-2">
                                     <div class="row ">
                                         <div class="col-md-6">
-                                            <a href="#!PayNow" class=" btn btn-primary " id="paynow"  >Pay Now</a>
+                                            <a href="#!paynow" class=" btn btn-primary " id="paynow"  >Pay Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +174,7 @@
     </div>
     </div>
     </div>
-    <div id="demo" class="carousel slide border border-light ml-5 mt-5 bg-light md-whiteframe-15dp" data-ride="carousel">
+    <div id="demo" class="carousel slide border border-light ml-5 mt-5 bg-light " data-ride="carousel">
 
 
         <h2 style="margin-left: 1.4rem ;"> <b> Supper Offers For Today</b></h2>
@@ -444,10 +435,10 @@
             </div>
         </div>
         <div class="container my-5 bg-white md-whiteframe-12dp">
-            <div class="row my-5">
+            <div class="row my-5" layout="row" layout-align="space-around center">
 
-                <div class="d-flex justify-content-between flex-wrap justify-content-center my-5">
-                    <div class="col-md-4 col-xs-12 col-12 card shadow-lg p-4 mb-4 bg-black mr-1" style="width: 20rem;">
+                <div class="d-flex justify-content-between flex-wrap     my-5">
+                    <div class="col-md-4 col-xs-12 col-sm-12 card shadow-lg p-4 mb-4 bg-black mr-1" style="width: 20rem;">
                         <img class="card-img-top" src="./images/services.png"
                             style="width: 110px;margin-left: 30%;height:100px;" alt="Common Services">
                         <div class="card-body">
@@ -463,7 +454,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-md-4 col-xs-12 col-12 card shadow-lg p-4 mb-4 bg-black" style="width: 20rem;">
+                    <div class="col-md-4 col-xs-12 col-sm-12 card shadow-lg p-4 mb-4 bg-black" style="width: 20rem;">
                         <img class="card-img-top" src="./images/home-delivery.png"
                             style="width: 100px;margin-left: 30%;height:100px;" alt="Call Services">
                         <div class="card-body">
