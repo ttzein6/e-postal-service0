@@ -35,7 +35,7 @@
   <div layout="row"  class="bg-light">
     <!-- Column of the logo -->
     <div layout="column" layout-align="end center" flex="40" class="logoSm">
-      <md-button    layout-align="center center" href="#!">
+      <md-button    layout-align="center center" href="/">
         <i class="text-primary" style="font-size:20px;font-weight: 550;">E-Postal<strong class="text-warning"> Services</strong></i>
       </md-button>
     </div>
@@ -107,7 +107,7 @@
   </div>
   <div ng-view></div>
   <footer class="page-footer font-small bg-primary pt-4" style=" font-size: larger;">
-      <md-button    layout-align="center center" class=" m-5" style="background-color:rgba(200, 200, 200, 0.2)">
+      <md-button  href="/"  layout-align="center center" class=" m-5" style="background-color:rgba(200, 200, 200, 0.2)">
         <i class="text-white" style="font-size:20px;font-weight: 550;">E-Postal<strong class="text-warning"> Services</strong></i>
       </md-button>
 
@@ -172,18 +172,10 @@
                 <h2 class="text-uppercase text-light">Our services</h2>
 
                 <ul class="list-unstyled">
-                    <li>
-                        <a class="text-light" href="#!">Offers</a>
+                    <li ng-repeat="x in navList">
+                        <a class="text-light" href="#!{{x.path}}">{{x.name}}</a>
                     </li>
-                    <li>
-                        <a class="text-light" href="#!">governmental</a>
-                    </li>
-                    <li>
-                        <a class="text-light" href="#!">Non-governmental</a>
-                    </li>
-                    <li>
-                        <a class="text-light" href="#!">financial</a>
-                    </li>
+                    
                 </ul>
 
             </div>
@@ -195,10 +187,10 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a class="text-light" href="#!">contact us</a>
+                        <a class="text-light" href="#!contactUs">contact us</a>
                     </li>
                     <li>
-                        <a class="text-light" href="#!">Locate us</a>
+                        <a class="text-light" href="#!locateUs">Locate us</a>
                     </li>
                     <li>
                         <a class="text-light" href="#!">Faqs</a>

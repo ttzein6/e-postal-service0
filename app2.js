@@ -74,6 +74,12 @@ myApp.config(['$routeProvider',function($routeProvider){
   .when('/realEA',{
     templateUrl: "realestateaffairsformalities.html",
   })
+  .when('/locateUs',{
+    templateUrl: "locateUs.html",
+  })
+  .when('/contactUs',{
+    templateUrl: "contactUs.html",
+  })
   .when('/EMS',{
     templateUrl: "EMS.html",
   })

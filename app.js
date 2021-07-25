@@ -139,6 +139,12 @@ myApp.config(['$routeProvider',function($routeProvider){
   .when('/paymentParkMeter',{
     templateUrl: "paymentmeter.html",
   })
+  .when('/locateUs',{
+    templateUrl: "locateUs.html",
+  })
+  .when('/contactUs',{
+    templateUrl: "contactUs.html",
+  })
   .otherwise({
     redirectTo:"/"
 })
