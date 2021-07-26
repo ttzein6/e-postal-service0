@@ -54,8 +54,9 @@
                                     <label for="mail">Type of Mail</label>
                                     <select name="mails" id="mails" class="form-control">
                                         <option value="Letters">Letters</option>
+                                        <option value="Letters">Parcel</option>
+                                        <option value="Letters">Post Card</option>
                                         <option value="parcel">email</option>
-                                        <option value="Postcard">Letters</option>
                                     </select>
                                 </div>
                                 <div>
@@ -72,8 +73,10 @@
                                     <label for="mail">Content of Mail</label>
                                     <select name="mails" id="mails" class="form-control">
                                         <option value="Content">Document</option>
+                                        <option value="Content">Non Document</option>
                                     </select>
                                 </div>
+                                
                                 
                                 
                                 <div >
@@ -84,13 +87,17 @@
                                     </div>  
                                 </div>
                             </div>
+                            <div class="col-md-6 ">
+                                <label>Zip Code:</label>
+                                <input type="number" class="form-control" name="zipcode">
+                            </div>
                     </div>
                         
                         <div class="d-flex justify-content-end align-items-end mt-5">
-                            <input type="submit" class="btn btn-lg btn-outline-primary mt-3" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?" value="Send">
+                            <input type="submit" class="btn btn-lg btn-outline-primary mt-3" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?" value="Calculate">
                         </div>
-                        <div class="alert alert-success my-3" role="alert" style="display: none;" id="submittedAlert" >
-                            Done!
+                        <div class="alert alert-primary my-3" role="alert" style="display: none;" id="submittedAlert" >
+                            Your postal rate is <strong>50$</strong>
                           </div>
                         <div class="alert alert-danger" role="alert" style="display: none;">
                             Something wrong!

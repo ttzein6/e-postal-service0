@@ -217,7 +217,7 @@ var loadFile = function(event) {
 };
 function submission(){
   document.getElementById('submittedAlert').style="display:auto;";
-  var delayInMilliseconds = 2000; //1 second
+  var delayInMilliseconds = 5000; //5 second
 
   setTimeout(function() {
     //your code to be executed after 1 second
